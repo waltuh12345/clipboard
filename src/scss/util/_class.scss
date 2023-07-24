@@ -1,0 +1,188 @@
+@use "../util/config" as *;
+
+.border {
+  border: 2px solid red;
+  > * {
+    border: 2px solid green;
+  }
+}
+
+.container {
+  margin-inline: auto;
+  max-width: $big-container;
+}
+
+.small-container {
+  max-width: $smallContainer;
+  margin-inline: auto;
+}
+
+.border-box {
+  padding: 1rem;
+  border: 2px solid var(--text);
+}
+
+.center-vertical {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.center-vh {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+%reset-btn {
+  background: none;
+  cursor: pointer;
+  color: inherit;
+  padding: 0;
+  border: none;
+}
+
+.hide-scrollbar {
+  overflow-y: hidden;
+}
+
+@media (min-width: 500px) {
+  .hide-scrollbar {
+    padding-right: 8px;
+  }
+}
+
+/* Style the scrollbar track */
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+/* Style the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+}
+
+/* Style the scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+/* Style the scrollbar corner */
+::-webkit-scrollbar-corner {
+  background-color: #f1f1f1;
+}
+
+/* Style the scrollbar track when scrollbar is in "dragging" state */
+::-webkit-scrollbar-thumb:active {
+  background-color: #333;
+}
+
+/* Set the width of the scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+%primary-btn {
+  overflow: hidden;
+  display: inline-block;
+  font-weight: bold;
+  border: 3px solid var(--clr-primary);
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+  color: var(--text);
+  text-decoration: none;
+  transition: 0.3s ease all;
+  z-index: 1;
+
+  &:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: var(--clr-primary);
+    z-index: -1;
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--bg);
+  }
+
+  &:hover:before,
+  &:focus:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+%secondary-btn {
+  overflow: hidden;
+  display: inline-block;
+  font-weight: bold;
+  border: 3px solid var(--clr-neutral);
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+  color: var(--text);
+  text-decoration: none;
+  transition: 0.3s ease all;
+  z-index: 1;
+
+  &:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: var(--clr-neutral);
+    z-index: -1;
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--bg);
+  }
+
+  &:hover:before,
+  &:focus:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.show {
+  opacity: 1;
+}
+
+.animate {
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 1s;
+}
+
+.animated {
+  filter: blur(0);
+}
