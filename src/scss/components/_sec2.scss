@@ -1,0 +1,30 @@
+@media (min-width: 600px) {
+  .sec2 {
+    .col-wrapper {
+      text-align: initial;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    header {
+      max-width: 600px;
+      margin-inline: auto;
+    }
+
+    picture {
+      flex: 0 1.5 34rem;
+    }
+
+    .row-wrapper {
+      flex: 0 1 26rem;
+    }
+  }
+}
+
+.sec4 {
+  p {
+    width: 90%;
+    margin-inline: auto;
+  }
+}

@@ -1,0 +1,10 @@
+@media (min-width: 600px) {
+  .btn-wrapper {
+    flex-direction: row;
+    gap: 0 1rem;
+
+    > * {
+      flex: 1;
+    }
+  }
+}
