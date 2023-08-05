@@ -1,0 +1,101 @@
+@use "./fa" as *;
+//=====COLORS======//
+:root {
+  font-size: 16px;
+  --err: #cf6679;
+  --h2-window-screen: clamp(1rem, calc(0.75rem + 0.67vw), 1.25rem);
+}
+
+.light-mode {
+  --bg: #ffffff;
+
+  --text: #121212;
+  --text700: #505050;
+  --text500: #8a8a8a;
+  --clr-primary: #34afe8;
+  --clr-neutral: #cc7500;
+  --box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+//=========MIXINS==========//
+
+.dark-mode {
+  --bg: #121212;
+  --text: #ffffff;
+  --text700: #f5f5f5;
+  --text500: #c2c2c2;
+  --clr-primary: #89d7f3;
+  --clr-neutral: #e5b760;
+  --input: #8a8a8a;
+  --box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+@mixin overlay() {
+  background-color: var(--bg);
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: white;
+    opacity: 0.1;
+  }
+}
+
+@mixin flex($fd, $gap) {
+  display: flex;
+  flex-direction: $fd;
+  gap: $gap;
+}
+
+@mixin hovered($clr) {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      color: $clr;
+    }
+  }
+}
+
+@mixin clicked($clr) {
+  &:active {
+    color: $clr;
+  }
+}
+
+//=========FONTS=========//
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+$ff: "Montserrat", sans-serif;
+$heading: clamp(1.13rem, calc(-0.87rem + 10vw), 1.63rem);
+$sub-heading: clamp(1rem, calc(0rem + 5vw), 1.25rem);
+
+$regular: 400;
+$medium: 500;
+$semibold: 600;
+$bold: 700;
+
+h1 {
+  font-size: $heading;
+}
+
+h2 {
+  font-size: $sub-heading;
+}
+
+//======STYLES=====//
+$card-box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+  rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+$bg: var(--bg);
+$clr-text: var(--text);
+$clr-primary: var(--clr-primary);
+$clr-neutral: var(--clr-neutral);
+$box-shadow: var(--box-shadow);
+%fs-icon {
+  @include fa-size($fa-size-scale-2xl);
+}
+
+$desktop-screen: 600px;
+$col-space: clamp(0.63rem, calc(-0.75rem + 3.67vw), 2rem);
+$btn-col-space: clamp(0.63rem, calc(0rem + 1.67vw), 1.25rem);
+$icon-color: var(--text700);

@@ -1,0 +1,65 @@
+@use "../global" as *;
+
+body {
+  background-color: $bg;
+  color: $clr-text;
+  font-size: 14px;
+  font-family: $ff;
+
+  text-align: center;
+  font-weight: $medium;
+}
+
+h1,
+h2 {
+  font-weight: $semibold;
+  margin-bottom: 0.8rem;
+  line-height: 1.1;
+  color: var(--text700);
+}
+
+p {
+  color: var(--text500);
+}
+
+.btn-wrapper {
+  > * {
+    border-radius: 30em;
+    flex: 1;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: $desktop-screen) {
+  .btn-wrapper {
+    width: 90%;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5em $btn-col-space;
+  }
+}
+
+header {
+  margin-bottom: 3.5rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.theme {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  gap: 1rem;
+  font-size: 10px;
+
+  &::before {
+    content: "Appearance";
+    font-size: 14px;
+  }
+}

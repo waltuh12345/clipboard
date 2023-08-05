@@ -1,0 +1,99 @@
+@use "../global" as *;
+footer {
+  position: relative;
+  margin-top: 10rem;
+  min-height: 31rem;
+  display: grid;
+  align-content: center;
+  box-shadow: $box-shadow;
+
+  .logo {
+    width: 3rem;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: $bg;
+    z-index: -2;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: $clr-text;
+    z-index: -1;
+    opacity: 0.1;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  &-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-size: 16px;
+  }
+
+  &-brands {
+    display: flex;
+    justify-content: center;
+    gap: 0 3em;
+
+    a {
+      font-size: 2em;
+      color: $icon-color;
+    }
+
+    > :nth-child(1) a {
+      @include fa-icon-brands($fa-var-facebook);
+    }
+
+    > :nth-child(2) a {
+      @include fa-icon-brands($fa-var-twitter);
+    }
+
+    > :nth-child(3) a {
+      @include fa-icon-brands($fa-var-instagram);
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  footer {
+    min-height: 10rem;
+  }
+
+  .footer {
+    $col-space: clamp(0.63rem, calc(-1.87rem + 6.67vw), 3.13rem);
+    flex-direction: row;
+    gap: 0 $col-space;
+    align-items: start;
+
+    .logo {
+      margin-inline: initial;
+      flex-shrink: 0;
+    }
+
+    &-links {
+      $col-space: clamp(0.63rem, calc(0rem + 1.67vw), 1.25rem);
+      flex: 0 1 500px;
+      margin-right: auto;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 0.5rem $col-space;
+    }
+
+    &-brands {
+      $col-space: clamp(0.63rem, calc(0rem + 1.67vw), 1.25rem);
+
+      gap: 0.5rem $col-space;
+    }
+  }
+}
