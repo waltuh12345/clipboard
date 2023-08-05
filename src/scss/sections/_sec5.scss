@@ -1,0 +1,28 @@
+@use "../global" as *;
+
+.sec5 {
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+  gap: 5rem $col-space;
+
+  > * .icon {
+    font-size: 50px;
+    color: $icon-color;
+  }
+
+  > :nth-child(1) .icon {
+    @include fa-icon-brands($fa-var-facebook);
+  }
+  > :nth-child(2) .icon {
+    @include fa-icon-brands($fa-var-microsoft);
+  }
+  > :nth-child(3) .icon {
+    @include fa-icon-brands($fa-var-twitter);
+  }
+  > :nth-child(4) .icon {
+    @include fa-icon-brands($fa-var-twitch);
+  }
+  > :nth-child(5) .icon {
+    @include fa-icon-brands($fa-var-instagram);
+  }
+}

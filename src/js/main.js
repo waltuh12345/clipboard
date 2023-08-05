@@ -1,14 +1,19 @@
-import "../scss/main.scss";
 import "animate.css";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import "../scss/main.scss";
 
+const loading = document.querySelector(".loading");
 const body = document.querySelector("body");
 body.style.overflowY = "hidden";
-const loading = document.querySelector(".loading-wrapper");
 
-Promise.all([import("./helper/observer")]).then(() => {
-  AOS.init();
-  body.style.overflowY = "";
-  loading.style.display = "none";
-});
+Promise.all([
+  import("./scroll/scroll"),
+  import("./theme/theme"),
+  import("./scroll/scrollbar"),
+])
+  .then(() => {
+    loading.style.display = "none";
+  })
+  .then(() => {
+    body.style.animation = "fadeIn 1s";
+    body.style.overflow = "";
+  });

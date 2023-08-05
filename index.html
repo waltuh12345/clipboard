@@ -4,30 +4,36 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Vite + Vue</title>
   </head>
   <body>
+    <div class="theme container">
+      <label class="switch">
+        <input type="checkbox" class="checkbox" />
+        <div class="slider"></div>
+      </label>
+    </div>
     <main>
-      <section class="sec1 small-container">
-        <div class="logo">
-          <a href="#"
-            ><img src="src/assets/images/logo.svg" alt="logo_img"
-          /></a>
-        </div>
-        <header>
-          <h1>A history of everything you copy</h1>
-          <p>
-            Clipboard allows you to track and organize everything you copy.
-            Instantly access your clipboard on all your devices.
-          </p>
-        </header>
-        <div class="btn-wrapper">
-          <button class="animate">Download for IOS</button>
-          <button class="animate">Download for Mac</button>
+      <section class="sec1">
+        <div class="showcase small container">
+          <div class="logo">
+            <a href="#"><img src="src/assets/images/logo.svg" alt="" /></a>
+          </div>
+          <header>
+            <h1>A history of everything you copy</h1>
+            <p>
+              Clipboard allows you to track and organize everything you copy.
+              Instantly access your clipboard on all your devices.
+            </p>
+          </header>
+          <div class="btn-wrapper">
+            <button class="">Download for iOS</button>
+            <button class="">Download for Mac</button>
+          </div>
         </div>
       </section>
-      <section class="container sec2">
-        <header>
+      <section class="sec2 container">
+        <header data-aos="fadeIn">
           <h2>Keep track of your snippets</h2>
           <p>
             Clipboard instantly stores any item you copy in the cloud, meaning
@@ -35,59 +41,58 @@
             Mac and iOS apps will help you organize everything.
           </p>
         </header>
-        <div class="col-wrapper">
-          <picture>
+        <div class="sec2-flex">
+          <picture class="box2" data-aos="fadeInLeft">
             <img
-              src="src/assets/images/image-computer.png"
-              alt="computer_img"
-              class="animate"
+              src="src/assets/illustration/undraw_online_test_re_kyfx.svg"
+              alt="laptop"
             />
           </picture>
-          <div class="row-wrapper animate">
-            <div>
+          <ul class="box1" data-aos="fadeInRight">
+            <li>
               <h2>Quick Search</h2>
               <p>
                 Easily search your snippets by content, category, web address,
                 application, and more.
               </p>
-            </div>
-            <div>
+            </li>
+
+            <li>
               <h2>iCloud Sync</h2>
               <p>Instantly saves and syncs snippets across all your devices.</p>
-            </div>
-            <div>
+            </li>
+            <li>
               <h2>Complete History</h2>
               <p>
                 Retrieve any snippets from the first moment you started using
                 the app.
               </p>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
       </section>
-      <section class="sec3 small-container">
-        <header class="animate">
+      <section class="sec3 small container">
+        <header data-aos="zoomIn">
           <h2>Access Clipboard anywhere</h2>
           <p>
             Whether you’re on the go, or at your computer, you can access all
             your Clipboard snippets in a few simple clicks.
           </p>
         </header>
-        <picture>
+        <picture data-aos="jackInTheBox">
           <img
-            src="src/assets/images/image-devices.png"
-            alt=""
-            class="animate"
+            src="src/assets/illustration/undraw_in_sync_re_jlqd.svg"
+            alt="devices"
           />
         </picture>
       </section>
       <section class="sec4 container">
-        <header>
+        <header data-aos="fadeIn">
           <h2>Supercharge your workflow</h2>
           <p>We’ve got the tools to boost your productivity.</p>
         </header>
-        <ul class="even-col tools-icon">
-          <li>
+        <ul class="even-col">
+          <li data-aos="fade-left" data-aos-delay="100">
             <div class="icon"></div>
             <h2>Create blacklists</h2>
             <p>
@@ -95,14 +100,14 @@
               by excluding certain sources.
             </p>
           </li>
-          <li>
+          <li data-aos="fade-left" data-aos-delay="200">
             <div class="icon"></div>
             <h2>Plain text snippets</h2>
             <p>
               Remove unwanted formatting from copied text for a consistent look.
             </p>
           </li>
-          <li>
+          <li data-aos="fade-left" data-aos-delay="300">
             <div class="icon"></div>
             <h2>Sneak preview</h2>
             <p>
@@ -111,73 +116,82 @@
           </li>
         </ul>
       </section>
-      <section class="sec5 container">
-        <ul class="even-col brand-icon">
-          <li>
-            <a href="#" class="animate"></a>
-          </li>
-          <li>
-            <a href="#" class="animate"></a>
-          </li>
-          <li>
-            <a href="#" class="animate"></a>
-          </li>
-          <li>
-            <a href="#" class="animate"></a>
-          </li>
-          <li>
-            <a href="#" class="animate"></a>
-          </li>
-        </ul>
+      <section class="sec5 even-col container">
+        <div>
+          <a href="#"
+            ><div class="icon" data-aos="fade-right" data-aos-delay="100"></div
+          ></a>
+        </div>
+        <div>
+          <a href="#"
+            ><div class="icon" data-aos="fade-right" data-aos-delay="200"></div
+          ></a>
+        </div>
+        <div>
+          <a href="#"
+            ><div class="icon" data-aos="fade-right" data-aos-delay="300"></div
+          ></a>
+        </div>
+        <div>
+          <a href="#"
+            ><div class="icon" data-aos="fade-right" data-aos-delay="400"></div
+          ></a>
+        </div>
       </section>
-      <section class="small-container">
-        <header>
-          <h2>A history of everything you copy</h2>
+      <section class="sec6 small container">
+        <header data-aos="fadeIn">
+          <h2>Clipboard for iOs and Mac OS</h2>
           <p>
-            Clipboard allows you to track and organize everything you copy.
-            Instantly access your clipboard on all your devices.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem
+            eaque exercitationem laboriosam. Quos aperiam, recusandae atque ea
+            debitis voluptatem voluptas? Excepturi id saepe et autem.
           </p>
         </header>
         <div class="btn-wrapper">
-          <button class="animate">Download for IOS</button>
-          <button class="animate">Download for Mac</button>
+          <button data-aos="zoomIn">Download for IOS</button>
+          <button data-aos="zoomIn">Download for Mac</button>
         </div>
       </section>
-      <footer class="animate">
-        <div class="footer container col-wrapper">
-          <div class="logo">
-            <a href="#"><img src="src/assets/images/logo.svg" alt="logo" /></a>
-          </div>
-          <ul class="footer-links">
-            <li><a href="#">FAQs</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Install Guide</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">Press Kit</a></li>
-          </ul>
-          <ul class="footer-brands">
-            <li>
-              <a href="#" class="animate"></a>
-            </li>
-            <li>
-              <a href="#" class="animate"></a>
-            </li>
-            <li>
-              <a href="#" class="animate"></a>
-            </li>
-          </ul>
-        </div>
-      </footer>
     </main>
-
-    <div class="loading-wrapper">
-      <div class="three-body">
-        <div class="three-body__dot"></div>
-        <div class="three-body__dot"></div>
-        <div class="three-body__dot"></div>
+    <footer>
+      <div class="footer container">
+        <div class="logo">
+          <a href="#"><img src="src/assets/images/logo.svg" alt="" /></a>
+        </div>
+        <ul class="footer-links">
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#"> Contact Us</a></li>
+          <li><a href="#"> Privacy Policy</a></li>
+          <li><a href="#"> Press Kit</a></li>
+          <li><a href="#"> Install Guide</a></li>
+        </ul>
+        <ul class="footer-brands">
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
+        </ul>
+      </div>
+    </footer>
+    <div class="loading">
+      <div class="wrapper">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="shadow"></div>
+        <div class="shadow"></div>
+        <div class="shadow"></div>
       </div>
     </div>
-
-    <script type="module" src="/src/js/main.js"></script>
+    <div class="os-scrollbar os-scrollbar-horizontal">
+      <div class="os-scrollbar-track">
+        <div class="os-scrollbar-handle"></div>
+      </div>
+    </div>
+    <div class="os-scrollbar os-scrollbar-vertical">
+      <div class="os-scrollbar-track">
+        <div class="os-scrollbar-handle"></div>
+      </div>
+    </div>
   </body>
+  <script type="module" src="src/js/main.js"></script>
 </html>

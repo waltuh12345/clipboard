@@ -1,0 +1,44 @@
+@use "../global" as *;
+.sec2 {
+  margin-bottom: 200px;
+  margin-top: 100px;
+
+  > :nth-child(1) {
+    margin-bottom: 3.5rem;
+    @extend .small;
+    margin-inline: auto;
+  }
+
+  &-flex {
+    @include flex(column, 3.8rem 0);
+
+    ul {
+      display: grid;
+      gap: 3rem 0;
+    }
+  }
+}
+
+@media (min-width: $desktop-screen) {
+  .sec2 {
+    &-flex {
+      text-align: initial;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 0 $col-space;
+
+      > picture {
+        flex: 0 1.5 30rem;
+      }
+
+      > ul {
+        flex: 0 1 28rem;
+
+        h2 {
+          font-size: var(--h2-window-screen);
+        }
+      }
+    }
+  }
+}

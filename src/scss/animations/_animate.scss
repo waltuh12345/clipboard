@@ -1,0 +1,31 @@
+body {
+  overflow-x: hidden;
+}
+
+@mixin scrollAnimation($in, $out) {
+  [data-aos="#{$in}"] {
+    opacity: 0;
+    transition-property: transform, opacity, filter;
+    animation: $out 1s;
+
+    &.aos-animate {
+      opacity: 1;
+      animation: $in 1s;
+    }
+
+    @media (min-width: 600px) {
+      &.aos-animate {
+        animation: $in 1s;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@include scrollAnimation(fadeIn, fadeOut);
+@include scrollAnimation(zoomIn, zoomOut);
+@include scrollAnimation(fadeInLeft, fadeOutLeft);
+@include scrollAnimation(fadeInRight, fadeOutRight);
+@include scrollAnimation(jackInTheBox, fadeOut);
+@include scrollAnimation(zoomInUp, zoomOutUp);
+@include scrollAnimation(bounceInUp, bounceOutUp);

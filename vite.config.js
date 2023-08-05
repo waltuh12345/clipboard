@@ -1,4 +1,8 @@
-export default {
-  base: "/clipboard/", // Replace '/my-app/' with the base URL of your application
-  // Other configuration options...
-};
+import { defineConfig } from "vite";
+import vue from "@vitejs/plugin-vue";
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [vue()],
+  base: "/clipboard/",
+});
